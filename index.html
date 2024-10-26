@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <div class="container">
+    <h2>WYKRESY</h2>
+  </div>
+  
+  <div class="">
+    <button class="btn-chart button button-red" value="sinus" onclick="open_chart_panel(this)">Sinus</button>
+    <button class="btn-chart button button-blue" value="potega" onclick="open_chart_panel(this)">Potęga</button>
+    <button class="btn-chart button button-blue" value="kwadrat" onclick="open_chart_panel(this)">Kwadrat</button>
+  </div>
+  
+  <div id="sinus" class="controls">
+    <h2>Sinus f(x)=a*sin(x*b)</h2>
+    <input type="range" id="sinus_amp" min="-5" max="5" step="0.1" value="1" oninput = "change_sinus_amp(this.value)">
+    <input type="range" id="sinus_freq" min="-5" max="5" step="0.1" value="1" oninput = "change_sinus_freq(this.value)">
+  </div>
+  
+  <div id="potega" class="controls" style="display:none">
+    <h2>Potęga f(x)=x^a</h2>
+    <input type="range" id="potega_val" min="0" max="10" value="2" oninput = "change_potega_val(this.value)">
+
+  </div>
+  
+  <div id="kwadrat" class="controls" style="display:none">
+    <h2>Kwadrat f(x)=a*x^2+b*x+c</h2>
+    <input type="range" id="kwad_a" min="-10" max="10" step="0.1" value="-1" oninput = "change_kwad_val_a(this.value)">
+    <input type="range" id="kwad_b" min="-5" max="5" step="0.1" value="0" oninput = "change_kwad_val_b(this.value)">
+    <input type="range" id="kwad_c" min="-5" max="5" step="0.1" value="2" oninput = "change_kwad_val_c(this.value)">
+  </div>
+
+  <div>
+    <canvas id="wykres_canv" width="800" height="800"></canvas><br>
+    <button id="download" class="button button-green" onclick="download()">Pobierz wykres</button>
+  </div>
+  
+  
+  <script src="sinus.js"></script>
+  <script src="potega.js"></script>
+  <script src="kwadrat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

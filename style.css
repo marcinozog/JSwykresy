@@ -1,0 +1,26 @@
+body {
+ background-color: lightgrey;
+}
+
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-red {
+    background-color: #ff0000;
+}
+
+.button-green {
+    background-color: #008800;
+}
+
+.button-blue {
+    background-color: #0000ff;
+}
