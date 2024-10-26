@@ -24,18 +24,7 @@ function draw_kwadrat(ctx, color = 'black') {
         x2 = x * 100 + ctx.canvas.width / 2;
         y2 = ctx.canvas.height - (y * 100 + ctx.canvas.height / 2);
 
-        //x2 = parseInt(x2);
-        //y2 = parseInt(y2);
         ctx.lineTo(x2, y2);
-        // console.log(x2, y2);
-
-        // if(x.toPrecision(1) == 0.1)
-        //     console.log(y);
-        //console.log(x.toPrecision(1));
-        //console.log(x.toFixed(2));
-        // console.log(x);
-        // console.log(y);
-        //console.log(Number.parseFloat(x).toFixed(1));
     }
 
     ctx.lineWidth = 2;

@@ -30,23 +30,6 @@ function draw_potega(ctx, color = 'black') {
     //window.requestAnimationFrame(draw_sinus);
 }
 
-function draw_potega2(ctx, color = 'black') {
-
-    ctx.beginPath();
-    ctx.moveTo(0, ctx.canvas.height / 2);
-
-    for(let x = 0; x < ctx.canvas.width; x++) {
-        let y = Math.pow(x, potega_val);
-        ctx.lineTo(x, y + ctx.canvas.height / 2);
-        console.log(x,y);
-    }
-
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = color;
-    ctx.stroke();
-    //window.requestAnimationFrame(draw_sinus);
-}
-
 function draw_potega_text(ctx, color) {
     ctx.font = "50px Arial";
     ctx.fillStyle = color;

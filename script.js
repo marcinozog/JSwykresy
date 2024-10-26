@@ -4,6 +4,7 @@ window.onload = () => {
     refresh();
 };
 
+// odświeżenie wykresu
 function refresh() {
     const canvas = document.getElementById("wykres_canv");
     const ctx = canvas.getContext("2d");
@@ -28,7 +29,7 @@ function refresh() {
     }
 }
 
-//
+// rysuje osie współrzędnych
 function draw_axes(ctx, color = 'black') {
 
     // szerokość i wysokość canvasu
@@ -49,7 +50,7 @@ function draw_axes(ctx, color = 'black') {
     ctx.stroke();
 }
 
-//
+// rysuje tło wykresu
 function fill_chart(ctx, color = 'black') {
 
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -57,7 +58,7 @@ function fill_chart(ctx, color = 'black') {
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
 
-//
+// otwiera panel sterowania dla zadanej funkcji
 function open_chart_panel(btn) {
     let type = btn.value;
 
@@ -82,17 +83,6 @@ function open_chart_panel(btn) {
     chart_type = type;
     refresh();
 }
-
-// function open_chart_panel2(type) {
-//     let i;
-//     let x = document.getElementsByClassName("controls");
-//     for (i = 0; i < x.length; i++) {
-//       x[i].style.display = "none";
-//     }
-//     document.getElementById(type).style.display = "block";
-//     chart_type = type;
-//     refresh();
-// }
 
 // zapisywanie wykresu
 function download() {
