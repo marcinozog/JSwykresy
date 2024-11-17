@@ -17,7 +17,7 @@ function draw_sinus(ctx, color = 'black') {
     y2 = ctx.canvas.height - (y * 100 + ctx.canvas.height / 2);
     ctx.moveTo(x2, y2);
 
-    for (x = sinus_x_min; x <= sinus_x_max; x += 0.1) {
+    for (x = sinus_x_min; x <= sinus_x_max; x += 0.01) {
         y = sinus_amp * Math.sin(x * sinus_freq);
         x2 = x * 100 + ctx.canvas.width / 2;
         y2 = ctx.canvas.height - (y * 100 + ctx.canvas.height / 2);

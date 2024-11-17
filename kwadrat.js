@@ -18,7 +18,7 @@ function draw_kwadrat(ctx, color = 'black') {
     y2 = ctx.canvas.height - (y * 100 + ctx.canvas.height / 2);
     ctx.moveTo(x2, y2);
 
-    for (x = kwadrat_x_min; x <= kwadrat_x_max; x += 0.1) {
+    for (x = kwadrat_x_min; x <= kwadrat_x_max; x += 0.01) {
         y = kwadrat_val_a * Math.pow(x, 2) + kwadrat_val_b * x + kwadrat_val_c;
 
         x2 = x * 100 + ctx.canvas.width / 2;

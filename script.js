@@ -1,4 +1,6 @@
 let chart_type = "sinus";
+let chart_width = 800;
+let chart_height = 800;
 
 window.onload = () => {
     refresh();
@@ -27,6 +29,17 @@ function refresh() {
         draw_kwadrat(ctx, "blue");
         draw_kwadrat_text(ctx, "green");
     }
+}
+
+function zoom(newVal) {
+    zoom_ = parseFloat(newVal);
+    const canvas = document.getElementById("wykres_canv");
+    canvas.setAttribute("height", chart_height*zoom_);
+    canvas.setAttribute("width", chart_width*zoom_);
+    refresh();
+
+    const label = document.getElementById("zoom_label");
+    label.innerText = zoom_;
 }
 
 // rysuje osie współrzędnych
